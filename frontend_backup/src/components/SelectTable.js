@@ -8,8 +8,6 @@ function SelectTable() {
   const tables = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; 
 
   const handleSelect = (tableNumber) => {
-    // CRITICAL FIX: Change from query string to URL parameter format
-    // This matches the route defined in your App.js: path="/menu/:tableNumber"
     navigate(`/menu/${tableNumber}`); 
   };
 
