@@ -1,0 +1,154 @@
+.queue-management {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.queue-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.queue-header h1 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.queue-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.wait-time, .queue-length, .user-position {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.join-queue-section, .in-queue-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.phone-input {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.phone-input input {
+  flex: 1;
+  padding: 1rem;
+  border: 2px solid #bdc3c7;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.join-btn, .pre-order-btn, .leave-btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.join-btn {
+  background: #27ae60;
+  color: white;
+}
+
+.pre-order-btn {
+  background: #3498db;
+  color: white;
+  margin-right: 1rem;
+}
+
+.leave-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+.queue-tip {
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+.queue-status {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.waiting-tips {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.waiting-tips ul {
+  text-align: left;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.live-queue {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.queue-list {
+  margin-top: 1rem;
+}
+
+.queue-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.queue-item:last-child {
+  border-bottom: none;
+}
+
+.queue-item.next-up {
+  background: #e8f6f3;
+  border-left: 4px solid #27ae60;
+}
+
+.position {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.customer-info {
+  color: #7f8c8d;
+}
+
+.wait-time {
+  color: #e74c3c;
+  font-weight: bold;
+}
