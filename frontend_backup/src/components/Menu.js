@@ -97,9 +97,9 @@ const placeOrder = async () => {
       price: item.price
     }));
 
-  console.log("🛒 Cart items:", Object.values(cart));
-  console.log("📦 Order items to send:", orderItems);
-  console.log("🏷️ Table number:", tableNumber);
+  console.log(" Cart items:", Object.values(cart));
+  console.log(" Order items to send:", orderItems);
+  console.log(" Table number:", tableNumber);
 
   if (!tableNumber || tableNumber === "undefined" || tableNumber === "null") {
     alert("Invalid table number. Please go back and select a table again.");
@@ -123,7 +123,7 @@ const placeOrder = async () => {
       status: "pending"
     };
 
-    console.log("🚀 Sending order data:", orderData);
+    console.log(" Sending order data:", orderData);
 
     const response = await axios.post("http://localhost:5000/api/orders", orderData, {
       timeout: 10000, // 10 second timeout
@@ -132,10 +132,10 @@ const placeOrder = async () => {
       }
     });
 
-    console.log("✅ Order response:", response.data);
+    console.log(" Order response:", response.data);
 
     if (response.data.success) {
-      alert("🎉 Order placed successfully!");
+      alert(" Order placed successfully!");
       setCart({});
     } else {
       // Handle backend-specific error messages
@@ -144,15 +144,15 @@ const placeOrder = async () => {
     }
 
   } catch (err) {
-    console.error("❌ Order submission failed:", err);
+    console.error(" Order submission failed:", err);
     
     // Detailed error analysis
     if (err.code === 'ECONNABORTED') {
-      alert("⏰ Request timeout - Server is taking too long to respond");
+      alert(" Request timeout - Server is taking too long to respond");
     } else if (err.response) {
       // Server responded with error status
-      console.log("📊 Error response data:", err.response.data);
-      console.log("📊 Error response status:", err.response.status);
+      console.log(" Error response data:", err.response.data);
+      console.log(" Error response status:", err.response.status);
       
       const serverError = err.response.data;
       let errorMessage = "Order failed. ";
@@ -167,13 +167,11 @@ const placeOrder = async () => {
         errorMessage += "Server error - please try again later";
       }
       
-      alert(`❌ ${errorMessage}`);
+      alert(` ${errorMessage}`);
     } else if (err.request) {
-      // Request was made but no response received
       console.log("🌐 No response received:", err.request);
-      alert("🔌 Cannot connect to server. Please check:\n1. Backend server is running on port 5000\n2. No CORS issues\n3. Network connectivity");
+      alert(" Cannot connect to server. Please check:\n1. Backend server is running on port 5000\n2. No CORS issues\n3. Network connectivity");
     } else {
-      // Other errors
       alert(` ${err.message}`);
     }
   } finally {
