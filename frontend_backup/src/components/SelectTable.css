@@ -1,7 +1,6 @@
 /* src/components/SelectTable.css */
 
 .select-table-wrapper {
-    /* NEW: Dark Gradient Background */
     background: linear-gradient(to right bottom, #1a1a1a, #0a0a0a); /* Deep dark gradient */
     display: flex;
     flex-direction: column; /* Allows content and footer to stack */
@@ -32,11 +31,6 @@
     text-shadow: 0 2px 5px rgba(0,0,0,0.5); /* Text shadow for pop */
 }
 
-/* You mentioned "Please select your table number to view the digital menu."
-   If you want to keep that text, ensure its color is light.
-   Otherwise, if your current UI only has "Welcome! Please Select Your Table",
-   you might not need the .instruction-text style.
-*/
 .instruction-text {
     color: #bdc3c7; /* Light grey for instruction text */
     font-size: 1.1rem;
